@@ -1,3 +1,1 @@
-'use strict';
-
-module.exports = require('./lib/svgpath');
+export { SvgPath} from "./lib/svgpath.js";

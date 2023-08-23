@@ -1,10 +1,5 @@
-svgpath
+svgpath-es
 =======
-
-[![CI](https://github.com/fontello/svgpath/workflows/CI/badge.svg)](https://github.com/fontello/svgpath/actions)
-[![NPM version](https://img.shields.io/npm/v/svgpath.svg?style=flat)](https://www.npmjs.org/package/svgpath)
-[![Coverage Status](https://img.shields.io/coveralls/fontello/svgpath/master.svg?style=flat)](https://coveralls.io/r/fontello/svgpath?branch=master)
-
 
 > Low level toolkit for SVG paths transformations.
 Sometimes you can't use `transform` attributes and have to apply changes to svg paths directly.
@@ -14,26 +9,22 @@ Note: this package works with [path data](https://www.w3.org/TR/SVG11/paths.html
 not with full svg xml sources.
 
 
-Install
--------
-
-```bash
-npm install svgpath
-```
-
-
 Example
 -------
 
 ```js
-var svgpath = require('svgpath');
+import { SvgPath } from "./index.js";
 
-var transformed = svgpath(__your_path__)
+const src = "M10 10 L15 15";
+const transformed = new SvgPath(src)
                     .scale(0.5)
                     .translate(100,200)
                     .rel()
                     .round(1)
                     .toString();
+
+console.log(src);
+console.log(transformed);
 ```
 
 
